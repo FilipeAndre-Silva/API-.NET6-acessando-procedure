@@ -1,3 +1,8 @@
 https://docs.microsoft.com/pt-br/ef/core/managing-schemas/scaffolding?tabs=dotnet-core-cli
 
 dotnet ef dbcontext scaffold "Server=localhost;Database=Ecommerce;User Id=sa;Password=Acesso@2021;MultipleActiveResultSets=true;Encrypt=YES;TrustServerCertificate=YES" Microsoft.EntityFrameworkCore.SqlServer
+
+
+dotnet ef --startup-project ../ControleProduto.Infra/ migrations add myMigration01
+
+ dotnet ef --startup-project ../ControleProduto.Api/ database update
